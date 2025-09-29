@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+    extends: ["docus"],
     modules: ["@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/scripts", "@nuxt/ui"],
     css: ["~/assets/app.css"],
     build: {
