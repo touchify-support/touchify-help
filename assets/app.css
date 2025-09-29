@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+    --font-sans: "Source Sans Pro", sans-serif;
+    --font-head: "Work Sans", sans-serif;
+}
+
+h1, h2 {
+    @apply font-head font-extrabold;
+}
