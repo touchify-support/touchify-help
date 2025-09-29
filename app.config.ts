@@ -20,4 +20,8 @@ export default defineAppConfig({
             secondary: "orange",
         },
     },
+    github: {
+        url: "https://github.com/touchifyapp/docs",
+        branch: "main",
+    },
 });
