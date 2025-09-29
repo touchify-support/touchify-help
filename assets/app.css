@@ -4,8 +4,12 @@
 @theme static {
     --font-sans: "Source Sans Pro", sans-serif;
     --font-head: "Work Sans", sans-serif;
+
+    --color-indigo: #5236dd;
+    --color-orange: #ffa76c;
 }
 
-h1, h2 {
+h1,
+h2 {
     @apply font-head font-extrabold;
 }
