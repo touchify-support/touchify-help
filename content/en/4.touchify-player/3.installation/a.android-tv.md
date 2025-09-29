@@ -1,0 +1,267 @@
+---
+title: Android TV Installation Guide
+description: Install the Touchify Player application on an Android TV device and configure a secure kiosk mode.
+navigation:
+    title: Android TV
+    icon: i-lucide-tv
+seo:
+    title: Touchify Player Installation Guide on Android TV
+    description: Learn how the Touchify Player application can be installed and run in secure kiosk mode on screens with an Android TV stick
+---
+
+## Initial setup
+
+### Google account
+
+Generally, Android TV requires connecting the device with a Google account. You can create a specific account for your project, for example *mycustomer.mycompany.signage@gmail.com*.
+
+On some devices, it is possible to skip this step. In that case, Google Play will not be available and installing applications will require connecting the device to a computer. More information in the section [Install an application with ADB](#use-adb-to-install-an-application-optional).
+
+### First start
+
+Before starting the installation of Touchify on your Android TV player, a few steps are necessary to start the player.
+Begin by connecting the player to your screen and to power, then follow the on-screen instructions:
+
+1. Pair the remote control
+2. Select the interface language and region
+3. Skip the **"Set up your TV quickly with your Android phone"** step
+4. Connect the player to your Wi-Fi network
+5. Sign in with a Google account
+6. Accept the **"Terms of Use"**
+7. On the **"Google Services"** step:
+    - Uncheck **"Use location"**
+    - Uncheck **"Help improve Android"**
+    - Click **"Accept"**
+8. On the **"Google Assistant"** step, select **"No, thanks"**
+9. On the **"Install other apps"** step, uncheck **"Install all the following apps"**, then **"Continue"**
+10. On the **"Stay informed"** step, select **"No, thanks"**
+11. On the **"Select your subscriptions"** step, click **"Continue"**
+
+## Install prerequisites
+
+### Install the Downloader app
+
+1. Open "Google Play"
+2. Search for "Downloader"
+3. Select "Downloader by AFTVnews"
+4. Click "Install"
+
+*Note: If Google Play is not available, use ADB to install Touchify directly. More information in the section [Install an application with ADB](#use-adb-to-install-an-application-optional).*
+
+![Downloading Downloader from Google Play](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-downloader.webp)
+
+### Update the webview
+
+1. Open **"Google Play"**
+2. Search for **"webview"**
+3. Select **"Android System Webview"**
+4. Click **"Update"**
+
+*Note: If Google Play is not available, use ADB to update the webview. More information in the section [Install an application with ADB](#use-adb-to-install-an-application-optional).*
+
+![Downloading WebView from Google Play](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-webview.webp)
+
+## Configure the player
+
+### Update the system
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Device Preferences"** then **"About"**
+3. Click **"System update"**
+4. If an update is available, install it
+
+### Remove player restrictions
+
+::note
+Stay on the "About" page, start at step 3.
+::
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Device Preferences"** then **"About"**
+3. Go to **"Build"**
+4. Click **7** times on **"Build"**
+
+### Change the device name
+
+::note
+Stay on the "About" page, start at step 3.
+::
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Device Preferences"** then **"About"**
+3. Click on **"Device name"** then **"Edit"**
+4. Select **"Enter a custom name"**
+5. Enter an identifiable name *(e.g. screen-client-1)*
+6. Press **"Enter"** on the keyboard
+
+### Disable the screensaver
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Device Preferences"** then **"Developer options"**
+3. Enable **"Stay awake"**
+4. Click **"Back"** to return to the **"Device Preferences"** page
+5. Go to **"Screen saver"**
+6. In **"Screen saver"**, select **"Sleep"**
+7. In **"Put device to sleep"**, select **"Never"**
+
+### Remove applications
+
+::tip
+It is recommended to remove or disable unused applications.
+::
+
+::note
+Note: you can use the ADB TV app to simplify this operation (see section [Install the ADB TV app](#use-adb-to-install-an-application-optional))
+::
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Apps"**
+3. Select an app to remove
+4. Click **"Uninstall"** or **"Disable"**
+
+### Update applications
+
+1. Open **"Google Play"**
+2. Click the user icon at the top right of the screen
+3. Go to **"Manage apps and games"** then **"Update"**
+4. Click **"Update all"**
+
+### Allow Downloader to install applications
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Apps"** then **"Security & restrictions"** then **"Unknown sources"**
+3. Check **"Downloader"**
+
+### Disable recommendations and synchronization
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Accounts & Sign-in"**
+3. Select your account
+4. Uncheck **"Autoplay trailers"**
+5. Check **"Apps only"** and click **"Enable"**
+6. Uncheck synchronizations for **"Calendar"**, **"Contacts"**, and **"Google Play Movies & TV"**
+
+## Install Touchify Player
+
+On the home screen:
+
+1. Open **"Downloader"**
+2. Allow **"Downloader"** to access photos, media, and files on your device
+3. In the address bar, enter the following URL: **get.touchify.io/android**
+4. After downloading, a confirmation window appears, click **"Install"**
+5. After installation, click **"OK"** *(do not open the app yet)*
+
+![Downloading Touchify Player on Downloader](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-download.webp)
+
+![Installing Touchify Player on Downloader](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-installe.webp)
+
+## Grant permissions to Touchify Player
+
+### Allow the app to launch at startup
+
+1. Go to the player settings *(top right of the screen)*
+2. Go to **"Apps"**, then **"Special app access"**, then **"Display over other apps"**
+3. Enable **"Touchify Player"**
+4. It is recommended to **disable all other apps**
+
+![Allowing Touchify overlay in Android TV settings](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-superposition.webp)
+
+### Allow the app to update
+
+1. Go back to the **"Apps"** menu
+1. Go to **"Security & restrictions"** then **"Unknown sources"**
+1. Enable **"Touchify Player"**
+1. Optionally, disable **"Downloader"**
+
+![Allowing Touchify update in Android TV settings](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-maj.webp)
+
+## Link the screen to your account
+
+From the home screen:
+
+1. Open **"Touchify Player"**
+2. Enter your deployment key (see [Introduction to Touchify Publisher](../../touchify-publisher/introduction))
+
+![Screen association on Android TV](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-association.webp)
+
+::note
+On first launch, a popup will appear asking you to enable automatic launch of Touchify Player at device startup, click **"Enable"**.
+::
+
+![Automatic startup permission for Touchify on Android TV](/4-touchify-player/3-installation/a-android-tv/fr-player-androidtv-boot.webp)
+
+## Use ADB to install an application (optional)
+
+### Where to find ADB?
+
+If you have installed the Android development tools on your computer, ADB is located in the *platform-tools* folder of the SDK, for example *AppData/Local/Android/Sdk/platform-tools*.
+
+You can also download ADB from [Google Android Developers](https://developer.android.com/studio/releases/platform-tools).
+
+### Where to find applications?
+
+Several websites list Android applications, for example [APK Mirror](https://www.apkmirror.com/).
+
+Search for an application and select the latest version that matches your Android version.
+
+The Touchify Player application is available on our website:
+
+::u-button{variant="primary" to="https://get.touchify.io" target="_blank" icon="i-lucide-download"}
+Download Touchify Player
+::
+
+### Install an application
+
+In the command line, in the folder containing ADB:
+
+```bash
+adb install -r "PATH\TO\FILE\package.apk"
+```
+
+## Configure an advanced kiosk mode (optional)
+
+### Install the ADB TV app
+
+::note
+If the device is already connected via ADB, you can skip this step. The ADB TV app allows access to ADB directly from the device.
+::
+
+From Google Play, search for the ADB TV app and install it.
+
+If Google Play is not available, install the app using ADB.
+
+### Set Touchify as the Home app
+
+Run the following command to set Touchify as the Home app
+
+```bash
+## From a command line
+adb shell pm set-home-activity co.touchify.player/co.touchify.cordova.plugin.launcher.LauncherActivity
+
+## From the ADB TV console
+pm set-home-activity co.touchify.player/co.touchify.cordova.plugin.launcher.LauncherActivity
+```
+
+Run the following command to disable the default home application:
+
+```bash
+## From a command line
+adb shell pm disable-user --user 0 com.google.android.tvlauncher
+
+## From the ADB TV console
+pm disable-user --user 0 com.google.android.tvlauncher
+```
+
+### Restore the default home screen
+
+Run the following commands to restore the default home screen:
+
+```bash
+## From a command line
+adb shell pm enable --user 0 com.google.android.tvlauncher
+adb shell pm set-home-activity com.google.android.tvlauncher/.MainActivity
+
+## From the ADB TV console
+pm enable --user 0 com.google.android.tvlauncher
+pm set-home-activity com.google.android.tvlauncher/.MainActivity
+```
