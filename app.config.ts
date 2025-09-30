@@ -21,7 +21,7 @@ export default defineAppConfig({
         },
     },
     github: {
-        url: "https://github.com/touchifyapp/docs",
+        url: "https://github.com/touchify-support/touchify-help",
         branch: "main",
     },
 });
