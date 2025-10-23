@@ -1,0 +1,36 @@
+---
+title: LG webOS Installation Guide
+description: Install the Touchify Player application on an LG webOS device.
+navigation:
+    title: LG webOS
+    icon: i-cbi-lg
+seo:
+    title: Touchify Player Installation Guide for LG webOS
+    description: Learn how the Touchify Player application can be installed on LG webOS devices
+---
+
+## Install the application
+
+Access the device settings and open the **SI Server Configuration**.
+
+![webOS Settings](/4-touchify-player/3-installation/b-webos/en-player-webos-ez-setting.webp)
+
+Enter the following configuration:
+- Enable the option: **Fully Qualified Domain Name**
+- Enter the following URL: **https://get.touchify.io/webos**
+- Select **Application Launch Mode**: **Local**
+- Select **Application Type**: **IPK**
+- Select **Local Application Update** mode: **Remote**
+- Click **Confirm** then **OK**
+- Restart the device
+
+![webOS Settings](/4-touchify-player/3-installation/b-webos/en-player-webos-si-server-setting.webp)
+
+
+## Associate the device with a broadcast group
+
+Use your deployment key to associate the device with one or more broadcast groups and control it from Touchify Publisher.
+
+![Device association](/4-touchify-player/3-installation/0-common/en-player-association.webp)
+
+To learn more, see the article [Introduction to Touchify Publisher](../../touchify-publisher/introduction).
