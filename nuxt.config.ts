@@ -117,7 +117,7 @@ export default defineNuxtConfig({
             redirect: { to: "/fr/guides/stripe-terminal", statusCode: 301 },
         },
         "/fr/guide-installation-android-tv": {
-            redirect: { to: "/fr/touchify-player/installation/a.android-tv", statusCode: 301 },
+            redirect: { to: "/fr/touchify-player/installation/android-tv", statusCode: 301 },
         },
     },
 });
